@@ -12,14 +12,14 @@
   <div class="wrap">
     <div class="brand"><span class="mark"><b>K</b><i>A</i></span><span class="name">Kart Avantaj</span></div>
     <h1>Gizlilik Politikası</h1>
-    <p class="sub">Gizlilik Politikası & KVKK Aydınlatma Metni · Son güncelleme: 22 Haziran 2026</p>
+    <p class="sub">Gizlilik Politikası & KVKK Aydınlatma Metni · Son güncelleme: 13 Ekim 2026</p>
     <a class="back" href="index.html">← Tüm yasal metinler</a>
   </div>
 </header>
 
 <div class="container">
   <div class="card"><h2><span class="n">1</span> Giriş ve Veri Sorumlusu</h2>
-    <p>Kart Avantaj ("Uygulama"), kredi ve banka kartı kampanyalarını derleyip karşılaştırmanıza yardımcı olur. Bu Gizlilik Politikası ve KVKK Aydınlatma Metni; hangi kişisel verilerin işlendiğini, ne amaçla kullanıldığını, kimlerle paylaşıldığını ve haklarınızı açıklar.</p>
+    <p>Kart Avantaj ("Uygulama"), kredi ve banka kartı kampanyalarını derleyip tek yerde görmenize yardımcı olur. Bu Gizlilik Politikası ve KVKK Aydınlatma Metni; hangi kişisel verilerin işlendiğini, ne amaçla kullanıldığını, kimlerle paylaşıldığını ve haklarınızı açıklar.</p>
     <p>Veri sorumlusu: Kart Avantaj<br>İletişim: <a href="mailto:info@kartavantaj.net">info@kartavantaj.net</a></p>
   </div>
 
@@ -30,6 +30,7 @@
       <li><b>Tercihleriniz:</b> seçtiğiniz kartlar, favori markalar, kategoriler ve bildirim ayarları. Cihazlar arası senkron için hesabınıza bağlı olarak sunucuda (Supabase) saklanır.</li>
       <li><b>Bildirim kimliği:</b> anlık bildirim için cihazınızın bildirim (FCM) jetonu.</li>
       <li><b>Abonelik durumu:</b> Pro üyeliğinizin aktif olup olmadığı (RevenueCat).</li>
+      <li><b>Hata ve teşhis kayıtları:</b> uygulama hata verdiğinde veya kapandığında teknik hata kaydı, cihaz modeli ve uygulama sürümü (Sentry). IP adresi, ad ve e-posta gönderilmez.</li>
       <li><b>Anonim kullanım olayları:</b> uygulamayı iyileştirmek için. Üçüncü taraf reklam takibi YAPILMAZ.</li>
     </ul>
     <p><b>Toplamadığımız veriler:</b> Kart numarası, CVV, son kullanma tarihi veya banka şifresi gibi finansal kimlik bilgilerini ASLA toplamayız.</p>
@@ -39,11 +40,12 @@
     <p>Verileriniz yalnızca şu amaçlarla işlenir:</p>
     <ul>
       <li>Hesabınızı oluşturmak ve yönetmek</li>
-      <li>Kartlarınıza göre en avantajlı kampanyaları göstermek</li>
+      <li>Seçtiğiniz kartlara uygun kampanyaları göstermek</li>
       <li>Favori markalarınızdaki fırsatları öne çıkarmak</li>
       <li>Tercihlerinize göre bildirim göndermek</li>
       <li>Pro aboneliğinizi yönetmek</li>
       <li>Yakındaki kampanyalı mağazaları haritada göstermek (konum izni verirseniz)</li>
+      <li>Uygulama hatalarını tespit edip düzeltmek</li>
     </ul>
   </div>
 
@@ -52,6 +54,7 @@
     <ul>
       <li>Yalnızca açıkça izin verdiğinizde kullanılır</li>
       <li>Sunucularda saklanmaz, yalnızca anlık sorgu için kullanılır</li>
+      <li>Haritada çevrenizdeki işletmeleri göstermek için anlık sorgu olarak OpenStreetMap'in Overpass hizmetine gönderilir; harita görüntüleri Google harita sunucularından yüklenir</li>
       <li>İstediğiniz zaman cihaz ayarlarından kapatılabilir</li>
     </ul>
   </div>
@@ -63,7 +66,9 @@
       <li><b>RevenueCat</b> — abonelik / satın alma yönetimi</li>
       <li><b>Google</b> (Sign-In ve Google Play Faturalandırma) — giriş ve ödeme</li>
       <li><b>Firebase Cloud Messaging</b> — anlık bildirimler</li>
-      <li><b>Google Maps/Places</b> — mağaza konum bilgileri (kişisel veri içermez)</li>
+      <li><b>Google Maps/Places</b> — mağaza konum bilgileri ve harita görüntüleri</li>
+      <li><b>OpenStreetMap (Overpass API)</b> — haritada çevredeki işletmeleri bulmak için anlık konum sorgusu</li>
+      <li><b>Sentry</b> — hata ve çökme raporları (ad, e-posta ve IP adresi içermez)</li>
     </ul>
   </div>
 
@@ -87,7 +92,7 @@
       <li><b>Açık rızanız</b> (md. 5/1): bildirim ve konum gibi isteğe bağlı özellikler.</li>
       <li><b>Meşru menfaat</b> (md. 5/2-f): hizmet güvenliği ve iyileştirme.</li>
     </ul>
-    <p>Verileriniz, hizmetin sunulabilmesi için yukarıda sayılan hizmet sağlayıcılara (Supabase, Google, RevenueCat) aktarılabilir. Bu aktarım yalnızca hizmetin gereği kadar ve gizlilik taahhüdü altında yapılır. Tam metin için <a href="kvkk-aydinlatma.html">KVKK Aydınlatma Metni</a>.</p>
+    <p>Verileriniz, hizmetin sunulabilmesi için yukarıda sayılan hizmet sağlayıcılara (Supabase, Google, RevenueCat, Sentry, OpenStreetMap) aktarılabilir. Bu aktarım yalnızca hizmetin gereği kadar ve gizlilik taahhüdü altında yapılır. Tam metin için <a href="kvkk-aydinlatma.html">KVKK Aydınlatma Metni</a>.</p>
   </div>
 
   <div class="card"><h2><span class="n">9</span> Çerezler ve Reklam Takibi</h2>
@@ -104,7 +109,7 @@
 
   <div class="card contact"><h2><span class="n">12</span> Değişiklikler ve İletişim</h2>
     <p>Bu politika zaman zaman güncellenebilir; önemli değişikliklerde uygulama içinden bilgilendirilirsiniz.</p>
-    <p>📧 <a href="mailto:info@kartavantaj.net">info@kartavantaj.net</a><br>Son güncelleme: 22 Haziran 2026</p>
+    <p>📧 <a href="mailto:info@kartavantaj.net">info@kartavantaj.net</a><br>Son güncelleme: 13 Ekim 2026</p>
   </div>
 </div>
 
